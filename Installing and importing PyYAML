@@ -1,0 +1,18 @@
+    rest:
+      url: "https://example.org/primenumbers/v1"
+      port: 8443
+
+    prime_numbers: [2, 3, 5, 7, 11, 13, 17, 19]Code language: YAML (yaml)
+    >>> import yaml
+    >>> with open('config.yml', 'r') as file
+    ...    prime_service = yaml.safe_load(file)
+
+    >>> prime_service
+    {'rest': 
+      { 'url': 'https://example.org/primenumbers/v1',
+        'port': 8443
+      },
+      'prime_numbers': [2, 3, 5, 7, 11, 13, 17, 19]}
+
+    >>> prime_service['rest']['url']
+    https://example.org/primenumbers/v1Code language: Python (python)
